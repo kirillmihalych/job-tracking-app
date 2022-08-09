@@ -1,18 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import main from '../assets/main.svg'
 
 const Landing = () => {
   return (
     <Wrapper>
-      <article className='info-container'>
+      <div className='info-container'>
         <h2>Трекинг работы</h2>
         <p>
           Отслеживайте прогресс в поиске работы, планируйте собеседования,
           составляйте план.
         </p>
-        <button className='btn'>Вход / Регистрация</button>
-      </article>
+        <Link to='register' className='btn'>
+          Вход / Регистрация
+        </Link>
+      </div>
       <img src={main} alt='illustration' className='main-img' />
     </Wrapper>
   )
@@ -35,6 +38,7 @@ const Wrapper = styled.div`
   }
   .btn {
     cursor: pointer;
+    text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
     border: none;
     font-size: 1.25rem;
